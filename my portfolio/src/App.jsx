@@ -1,7 +1,8 @@
 import { createElement, useEffect, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, Database, ExternalLink, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { BriefcaseBusiness, Download, Mail, Atom, Server, Coffee, Braces, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaJs, FaJava, FaDatabase, FaCode, FaGithub, FaArrowRight, FaDownload } from "react-icons/fa";
+import { Mail, ChevronDown } from "lucide-react";
 import "./portfolio.css";
 import "./reference-hero.css";
 
@@ -98,42 +99,50 @@ function App() {
             <div><i /> DEVELOPER <i /></div>
           </div>
           <div className="ref-hero-content">
-            <div className="ref-intro">
+            <motion.div className="ref-intro"
+              initial={{ opacity: 0, x: -45 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.85 }}>
               <div className="ref-namaste">नमस्ते <span>🙏</span></div>
-              <p className="ref-hello">Hello, I’m</p>
+              <p className="ref-hello">Hello, I'm</p>
               <h1>KAUSHAL<br /><span>KAURAV</span></h1>
               <p className="ref-designation">B.Tech CSE Student <b>|</b> Full Stack Developer</p>
               <p className="ref-summary">I build modern web applications, solve complex problems, and turn ideas into real-world products.</p>
               <div className="ref-actions">
-                <a className="ref-primary" href="#projects"><BriefcaseBusiness size={20} /> View Projects <ArrowRight size={19} /></a>
-                <a className="ref-secondary" href="#resume"><Download size={20} /> View Resume</a>
+                <a className="ref-primary" href="#projects">View Projects <FaArrowRight aria-hidden="true" /></a>
+                <a className="ref-secondary" href="#resume"><FaDownload aria-hidden="true" /> View Resume</a>
               </div>
               <div className="ref-connect">
-                <p>Let’s connect:</p>
+                <p>LET'S CONNECT</p>
                 <div className="ref-socials">
                   <a className="ref-social" href="https://github.com/Kaushalkaurav" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={24} /></a>
-                  <a className="ref-social ref-social-contact" href="#contact" aria-label="Contact"><Mail size={23} /></a>
+                  <a className="ref-social ref-social-contact" href="#contact" aria-label="Contact section"><Mail size={23} /></a>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="ref-center">
               <div className="ref-photo-ring" aria-hidden="true" />
-              <img src="/profile.png" alt="Kaushal Kaurav" className="ref-portrait" fetchPriority="high" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://github.com/Kaushalkaurav.png"; }} />
+              <motion.img src="/profile.png" alt="Kaushal Kaurav" className="ref-portrait"
+                initial={{ opacity: 0, y: 45 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.1, ease: "easeOut" }}
+                onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://github.com/Kaushalkaurav.png"; }}
+              />
             </div>
             <div className="ref-skills ref-skills-left" aria-label="Frontend technologies">
-              <div className="ref-skill"><span>REACT</span><Atom size={43} /></div>
-              <div className="ref-skill"><span>JAVASCRIPT</span><span className="ref-js">JS</span></div>
-              <div className="ref-skill"><span>NODE.JS</span><Server size={40} /></div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{delay:.25}}><span>REACT</span><FaReact size={43} /></motion.div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{delay:.4}}><span>JAVASCRIPT</span><FaJs size={40} /></motion.div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{delay:.55}}><span>NODE.JS</span><FaNodeJs size={40} /></motion.div>
             </div>
             <div className="ref-skills ref-skills-right" aria-label="Other technologies">
-              <div className="ref-skill"><Coffee size={42} /><span>JAVA</span></div>
-              <div className="ref-skill"><Database size={40} /><span>MYSQL</span></div>
-              <div className="ref-skill"><Braces size={40} /><span>WEB DEV</span></div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:30}} animate={{opacity:1,x:0}} transition={{delay:.25}}><FaJava size={42} /><span>JAVA</span></motion.div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:30}} animate={{opacity:1,x:0}} transition={{delay:.4}}><FaDatabase size={40} /><span>MYSQL</span></motion.div>
+              <motion.div className="ref-skill" initial={{opacity:0,x:30}} animate={{opacity:1,x:0}} transition={{delay:.55}}><FaCode size={40} /><span>WEB DEV</span></motion.div>
             </div>
           </div>
           <div className="ref-bottom">
             <div className="ref-motto"><i /><span>BUILD <b>•</b> CREATE <b>•</b> LEARN <b>•</b> INNOVATE</span><i /></div>
-            <a href="#about" className="ref-scroll" aria-label="Scroll down to About section"><span className="ref-mouse"><span /></span><span>SCROLL DOWN</span><ChevronDown size={19} /></a>
+            <a href="#about" className="ref-scroll" aria-label="Scroll to About section"><span className="ref-mouse"><span /></span><span>SCROLL DOWN</span><ChevronDown size={19} /></a>
           </div>
         </div>
       </section>
