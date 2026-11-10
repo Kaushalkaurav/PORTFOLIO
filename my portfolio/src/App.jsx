@@ -1,5 +1,5 @@
 import { createElement, useEffect, useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, Database, ExternalLink, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
+import { ArrowUpRight, Check, Code2, Database, ExternalLink, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaJs, FaJava, FaDatabase, FaCode, FaGithub, FaArrowRight, FaDownload } from "react-icons/fa";
 import { Mail, ChevronDown } from "lucide-react";
