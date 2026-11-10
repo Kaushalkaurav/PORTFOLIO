@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, Database, ExternalLink, Github, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
+import { createElement, useEffect, useState } from "react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, Database, ExternalLink, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
 import "./portfolio.css";
 
 const nav = [
@@ -120,7 +120,7 @@ function App() {
       <section id="skills" className="section section-anchor skills-section">
         <div className="page-width">
           <SectionHeading eyebrow="02 / TOOLKIT" title={<>Technologies <em>I work with.</em></>} subtitle="A growing toolkit for building from interface to implementation." />
-          <div className="skill-grid">{technologies.map(({group, icon: Icon, items}, index) => <article className="skill-panel" key={group}><div className="skill-top"><div className="skill-icon-box"><Icon size={23} /></div><span className="skill-index">0{index+1} / 03</span></div><h3>{group}</h3><div className="skill-tags">{items.map(item => <span key={item}>{item}</span>)}</div></article>)}</div>
+          <div className="skill-grid">{technologies.map(({group, icon, items}, index) => <article className="skill-panel" key={group}><div className="skill-top"><div className="skill-icon-box">{createElement(icon, { size: 23 })}</div><span className="skill-index">0{index+1} / 03</span></div><h3>{group}</h3><div className="skill-tags">{items.map(item => <span key={item}>{item}</span>)}</div></article>)}</div>
         </div>
       </section>
 
@@ -138,7 +138,7 @@ function App() {
       </section>
 
       <section id="contact" className="section section-anchor contact-section">
-        <div className="page-width contact-layout"><div><SectionHeading eyebrow="05 / SAY HELLO" title={<>Have an idea?<br /><em>Let's connect.</em></>} /><p className="contact-lead">I'm interested in connecting with developers, collaborators, and people building useful things. Reach out through GitHub.</p><div className="contact-actions"><a className="button button-primary" href="https://github.com/Kaushalkaurav" target="_blank" rel="noreferrer">Visit GitHub <Github size={18} /></a><button className="button button-outline" onClick={copyProfile}>{copied ? <Check size={17} /> : <ExternalLink size={17} />}{copied ? "Profile link copied" : "Copy profile link"}</button></div></div><div className="contact-decoration" aria-hidden="true"><span>@</span><p>LET'S MAKE IT HAPPEN</p></div></div>
+        <div className="page-width contact-layout"><div><SectionHeading eyebrow="05 / SAY HELLO" title={<>Have an idea?<br /><em>Let's connect.</em></>} /><p className="contact-lead">I'm interested in connecting with developers, collaborators, and people building useful things. Reach out through GitHub.</p><div className="contact-actions"><a className="button button-primary" href="https://github.com/Kaushalkaurav" target="_blank" rel="noreferrer">Visit GitHub <ExternalLink size={18} /></a><button className="button button-outline" onClick={copyProfile}>{copied ? <Check size={17} /> : <ExternalLink size={17} />}{copied ? "Profile link copied" : "Copy profile link"}</button></div></div><div className="contact-decoration" aria-hidden="true"><span>@</span><p>LET'S MAKE IT HAPPEN</p></div></div>
       </section>
     </main>
 
