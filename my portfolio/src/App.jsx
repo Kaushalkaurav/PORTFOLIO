@@ -8,33 +8,23 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("TIMER STARTED");
-
     const timer = setTimeout(() => {
-      console.log("TIMER FINISHED");
       setLoading(false);
-    }, 2500);
+    }, 3000);
 
-    return () => {
-      clearTimeout(timer);
-      console.log("TIMER CLEANED");
-    };
+    return () => clearTimeout(timer);
   }, []);
-
-  console.log("Loading:", loading);
 
   return (
     <div className="min-h-screen bg-[#090304]">
-
-      {loading && <LoodingScreen />}
-
-      {!loading && (
+      {loading ? (
+        <LoodingScreen />
+      ) : (
         <>
           <Navbar />
           <AppRoutes />
         </>
       )}
-
     </div>
   );
 }
