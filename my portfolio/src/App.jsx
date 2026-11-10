@@ -1,6 +1,9 @@
 import { createElement, useEffect, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, Database, ExternalLink, GraduationCap, Layers3, Menu, Moon, Sun, Terminal, X } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { BriefcaseBusiness, Download, Mail, Atom, Server, Coffee, Braces, ChevronDown } from "lucide-react";
 import "./portfolio.css";
+import "./reference-hero.css";
 
 const nav = [
   { name: "Home", id: "home" },
@@ -72,7 +75,7 @@ function App() {
       <div className="nav-inner">
         <a href="#home" className="brand" onClick={navigate} aria-label="Kaushal Kaurav, home">
           <span className="brand-symbol">K<span>K</span><i>.</i></span>
-          <span className="brand-name">KAUSHAL <strong>KAURAV</strong></span>
+          <span className="brand-name">Kaushal <strong>Kaurav</strong></span>
         </a>
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation" id="primary-navigation">
           {nav.map(item => <a href={"#" + item.id} key={item.id} onClick={navigate} className={active === item.id ? "nav-active" : ""} aria-current={active === item.id ? "location" : undefined}>{item.name}</a>)}
@@ -86,27 +89,52 @@ function App() {
     </header>
 
     <main id="main-content">
-      <section id="home" className="hero section-anchor">
-        <div className="hero-grid" aria-hidden="true" /><div className="hero-halo" aria-hidden="true" />
-        <div className="page-width hero-inner">
-          <div className="hero-copy">
-            <p className="hero-kicker"><span className="pulse-dot" /> NAMASTE <span className="kicker-divider">/</span> WELCOME TO MY PORTFOLIO</p>
-            <p className="intro">Hello, I'm</p>
-            <h1>KAUSHAL<br /><span>KAURAV<span className="title-dot">.</span></span></h1>
-            <div className="role-line"><span>FULL STACK DEVELOPER</span><span className="role-separator">/</span><span>B.TECH CSE STUDENT</span></div>
-            <p className="hero-body">I design and build modern web experiences, combining clear thinking with thoughtful interfaces and practical development.</p>
-            <div className="hero-ctas">
-              <a className="button button-primary" href="#projects">Explore my work <ArrowUpRight size={18} /></a>
-              <a className="button button-outline" href="#contact">Get in touch <ArrowRight size={18} /></a>
+      <section id="home" className="hero reference-hero section-anchor">
+        <div className="ref-dots ref-dots-left" aria-hidden="true" />
+        <div className="ref-dots ref-dots-right" aria-hidden="true" />
+        <div className="ref-hero-inner">
+          <div className="ref-heading" aria-hidden="true">
+            <span>FULL STACK</span>
+            <div><i /> DEVELOPER <i /></div>
+          </div>
+          <div className="ref-hero-content">
+            <div className="ref-intro">
+              <div className="ref-namaste">नमस्ते <span>🙏</span></div>
+              <p className="ref-hello">Hello, I’m</p>
+              <h1>KAUSHAL<br /><span>KAURAV</span></h1>
+              <p className="ref-designation">B.Tech CSE Student <b>|</b> Full Stack Developer</p>
+              <p className="ref-summary">I build modern web applications, solve complex problems, and turn ideas into real-world products.</p>
+              <div className="ref-actions">
+                <a className="ref-primary" href="#projects"><BriefcaseBusiness size={20} /> View Projects <ArrowRight size={19} /></a>
+                <a className="ref-secondary" href="#resume"><Download size={20} /> View Resume</a>
+              </div>
+              <div className="ref-connect">
+                <p>Let’s connect:</p>
+                <div className="ref-socials">
+                  <a className="ref-social" href="https://github.com/Kaushalkaurav" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={24} /></a>
+                  <a className="ref-social ref-social-contact" href="#contact" aria-label="Contact"><Mail size={23} /></a>
+                </div>
+              </div>
+            </div>
+            <div className="ref-center">
+              <div className="ref-photo-ring" aria-hidden="true" />
+              <img src="/profile.png" alt="Kaushal Kaurav" className="ref-portrait" fetchPriority="high" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://github.com/Kaushalkaurav.png"; }} />
+            </div>
+            <div className="ref-skills ref-skills-left" aria-label="Frontend technologies">
+              <div className="ref-skill"><span>REACT</span><Atom size={43} /></div>
+              <div className="ref-skill"><span>JAVASCRIPT</span><span className="ref-js">JS</span></div>
+              <div className="ref-skill"><span>NODE.JS</span><Server size={40} /></div>
+            </div>
+            <div className="ref-skills ref-skills-right" aria-label="Other technologies">
+              <div className="ref-skill"><Coffee size={42} /><span>JAVA</span></div>
+              <div className="ref-skill"><Database size={40} /><span>MYSQL</span></div>
+              <div className="ref-skill"><Braces size={40} /><span>WEB DEV</span></div>
             </div>
           </div>
-          <div className="hero-visual" aria-label="Abstract developer illustration">
-            <div className="visual-orbit orbit-outer" /><div className="visual-orbit orbit-mid" /><div className="visual-orbit orbit-inner" />
-            <div className="hero-emblem"><span className="emblem-code">&lt;/&gt;</span><span className="emblem-sub">BUILDING THE WEB</span></div>
-            <div className="floating-label label-top"><span className="tiny-dot" /> OPEN TO BUILDING</div>
-            <div className="floating-label label-bottom"><Terminal size={15} /> CODE. CREATE. REPEAT.</div>
+          <div className="ref-bottom">
+            <div className="ref-motto"><i /><span>BUILD <b>•</b> CREATE <b>•</b> LEARN <b>•</b> INNOVATE</span><i /></div>
+            <a href="#about" className="ref-scroll" aria-label="Scroll down to About section"><span className="ref-mouse"><span /></span><span>SCROLL DOWN</span><ChevronDown size={19} /></a>
           </div>
-          <div className="hero-footer"><a href="#about" className="scroll-cue"><span className="scroll-mark"><ArrowDown size={17} /></span> SCROLL TO EXPLORE</a><div className="hero-footer-right"><span>DESIGN</span><i>·</i><span>DEVELOP</span><i>·</i><span>DELIVER</span></div></div>
         </div>
       </section>
 
