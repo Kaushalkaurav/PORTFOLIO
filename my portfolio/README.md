@@ -1,12 +1,39 @@
-# React + Vite
+# Kaushal Kaurav — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, single-page portfolio built with React 19, Vite, CSS, and Lucide icons.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+cd "my portfolio"
+npm ci
+npm run dev
+```
 
-## Expanding the ESLint configuration
+To check production output:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+## Structure
+
+- `src/App.jsx` — homepage and functional section navigation
+- `src/portfolio.css` — responsive design and dark/light themes
+- `index.html` — metadata and browser title
+- `public/favicon.svg` — custom KK brand icon
+
+## Publishing
+
+Set the Vercel / Netlify project **root directory** to `my portfolio`, build command to `npm run build`, and output directory to `dist`. The portfolio uses in-page anchors, so no client-side route rewrite is required.
+
+## Before sharing publicly
+
+- Add a genuine professional résumé and a verified download URL before introducing a download button.
+- Add verified project repositories, screenshots and live demos to the `projects` data in `src/App.jsx`.
+- Add a preferred contact email or professional social accounts only after verifying they are correct.
+- The hero uses an original abstract developer motif because there is no portrait asset in this repository. Replace it with an actual portrait only when a photo is available.
+
+No visitor-facing links lead to missing local files or unsupported contact forms.
