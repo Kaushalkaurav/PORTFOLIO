@@ -1,0 +1,49 @@
+
+/* Screenshot-style home hero. Scoped to avoid changing the remaining sections. */
+.reference-hero{position:relative;min-height:calc(100svh - 90px);isolation:isolate;overflow:hidden;color:#fff;background:radial-gradient(ellipse 38% 50% at 54% 58%,#3b0716 0%,#170208 52%,#0c0205 100%)}
+.reference-hero::after{content:"";position:absolute;inset:auto -12% -90px;height:225px;background:repeating-radial-gradient(ellipse at 50% 110%,transparent 0 14px,#82203855 15px,transparent 16px 25px);pointer-events:none;opacity:.55}
+.reference-hero .ref-dots{position:absolute;top:24px;width:80px;height:90px;background-image:radial-gradient(#b52b42 1.5px,transparent 2px);background-size:22px 22px;opacity:.8}
+.reference-hero .ref-dots-left{left:14px}.reference-hero .ref-dots-right{right:14px}
+.reference-hero .ref-hero-inner{position:relative;z-index:1;max-width:1600px;min-height:calc(100svh - 90px);padding:0 clamp(22px,4vw,65px);margin:auto;display:flex;flex-direction:column}
+.reference-hero .ref-heading{position:absolute;top:15px;left:25%;right:9%;text-align:center;pointer-events:none;z-index:0;white-space:nowrap}
+.reference-hero .ref-heading>span{font-family:"Barlow Condensed",Impact,sans-serif;font-weight:800;font-size:clamp(85px,10vw,166px);line-height:.91;letter-spacing:.10em;color:transparent;-webkit-text-stroke:1px #a12942a8}
+.reference-hero .ref-heading>div{font-size:clamp(18px,2.1vw,30px);letter-spacing:clamp(7px,1.6vw,24px);color:#d33751;display:flex;align-items:center;justify-content:center;gap:20px;padding-left:12px;margin-top:5px}
+.reference-hero .ref-heading i,.reference-hero .ref-motto i{display:block;width:clamp(32px,9vw,145px);height:1px;background:linear-gradient(90deg,transparent,#aa2d45)}
+.reference-hero .ref-heading i:last-child,.reference-hero .ref-motto i:last-child{transform:scaleX(-1)}
+.reference-hero .ref-hero-content{position:relative;flex:1;min-height:715px}
+.reference-hero .ref-intro{position:relative;z-index:5;width:35%;min-width:360px;padding-top:130px}
+.reference-hero .ref-namaste{width:188px;border-bottom:1px solid #49212b;padding-bottom:14px;margin-bottom:18px;color:#ce4256;font-size:29px}.reference-hero .ref-namaste span{font-size:25px}
+.reference-hero .ref-hello{font-size:26px;color:#f4edf0;margin:0 0 7px}
+.reference-hero .ref-intro h1{font-family:"Barlow Condensed",Impact,sans-serif;font-size:clamp(75px,6.6vw,112px);font-weight:900;letter-spacing:-1px;line-height:.88;margin:0;color:#fff}
+.reference-hero .ref-intro h1 span{color:#c02c43}
+.reference-hero .ref-designation{white-space:nowrap;margin:15px 0 0;font-size:16px}.reference-hero .ref-designation b{padding:0 5px;color:#ed425c}
+.reference-hero .ref-summary{font-size:15px;max-width:375px;line-height:1.9;color:#bfaeb5;margin:21px 0 0}
+.reference-hero .ref-actions{display:flex;gap:16px;margin-top:34px;white-space:nowrap}
+.reference-hero .ref-actions a{min-height:58px;display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:0 19px;border-radius:35px;border:1px solid #e73c54;color:#fff;font-size:14px;transition:transform .2s,box-shadow .2s}
+.reference-hero .ref-actions a:hover{transform:translateY(-3px);box-shadow:0 8px 28px #a61f3b55}
+.reference-hero .ref-primary{background:linear-gradient(110deg,#dc394e,#8e1428)}
+.reference-hero .ref-secondary{background:#170509}
+.reference-hero .ref-connect{margin-top:30px}.reference-hero .ref-connect p{margin:0 0 12px;color:#bdaeb4;font-size:15px}
+.reference-hero .ref-socials{display:flex;align-items:center;gap:15px}.reference-hero .ref-social{width:45px;height:45px;display:grid;place-items:center;border:1px solid #6c2e3b;border-radius:50%;background:#231116;color:#fff;transition:transform .2s}.reference-hero .ref-social:hover{transform:translateY(-4px)}.reference-hero .ref-social-contact{background:#9a1e30}
+.reference-hero .ref-center{position:absolute;z-index:3;left:50%;bottom:-35px;transform:translateX(-50%);height:635px;width:min(46vw,670px);pointer-events:none}
+.reference-hero .ref-photo-ring{position:absolute;border:2px solid #fa5068;border-radius:50%;width:64%;aspect-ratio:1;top:20%;left:18%;box-shadow:0 0 60px #e8244740,inset 0 0 45px #bc1c3740}
+.reference-hero .ref-portrait{display:block;position:absolute;z-index:2;inset:0;width:100%;height:100%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 20px 30px #050103bd);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.reference-hero .ref-skills{position:absolute;z-index:2;top:220px;display:grid;gap:28px;pointer-events:none}
+.reference-hero .ref-skills-left{left:26%;text-align:right}.reference-hero .ref-skills-right{right:5%;text-align:left}
+.reference-hero .ref-skill{display:flex;gap:14px;align-items:center;white-space:nowrap;border-bottom:1px dotted #632031;padding-bottom:8px;font-family:"Barlow Condensed",Impact,sans-serif;font-size:clamp(30px,3.1vw,53px);font-weight:800;line-height:1.05;color:#7e2335;-webkit-text-stroke:.6px #b02e48}
+.reference-hero .ref-skill svg{color:#9a2840;stroke-width:1.5}.reference-hero .ref-js{border:1px solid #9d2e48;font:700 20px Arial,sans-serif;padding:5px;color:#be4059;-webkit-text-stroke:0}
+.reference-hero .ref-bottom{position:relative;z-index:4;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 0 21px}
+.reference-hero .ref-motto{display:flex;align-items:center;justify-content:center;gap:25px;color:#db3951;letter-spacing:clamp(3px,.85vw,11px);font-size:14px;white-space:nowrap}.reference-hero .ref-motto b{font-weight:400;padding:0 10px}
+.reference-hero .ref-scroll{display:flex;align-items:center;flex-direction:column;gap:5px;color:#b7a3ad;font-size:11px;letter-spacing:.8px}
+.reference-hero .ref-mouse{display:flex;justify-content:center;padding-top:8px;width:24px;height:42px;border:2px solid #dc3b54;border-radius:20px}.reference-hero .ref-mouse span{display:block;width:2px;height:10px;border-radius:4px;background:#dc3b54;animation:ref-scroll 1.8s infinite}@keyframes ref-scroll{50%{transform:translateY(7px);opacity:.3}}
+/* Header styled like reference but kept functional and accessible */
+.site-header{height:90px;background:#110307;border-color:#35121c}
+.nav-inner{max-width:1600px;padding-inline:clamp(22px,3.8vw,60px)}.brand{gap:18px}.brand-symbol{font-size:55px;color:#fff;letter-spacing:-11px;padding-right:9px}.brand-symbol span{color:#b92841}.brand-symbol i{display:none}.brand-name{font-size:20px;font-weight:400;letter-spacing:0;text-transform:none;white-space:nowrap}.brand-name strong{color:#d7344b;font-weight:400}
+.nav-links{gap:clamp(18px,3.5vw,56px)}.nav-links a{font-size:15px}.nav-links a.nav-active,.nav-links a:hover{color:#ef455e}
+.nav-contact{display:none}.ref-theme-button{border:1px solid #622132;border-radius:50%;background:#210710;color:#e34860}
+:root[data-theme=light] .site-header{background:#170509}:root[data-theme=light] .reference-hero{background:radial-gradient(ellipse at 53% 61%,#500c25,#150308 70%);color:#fff}
+@media(max-width:1250px){.reference-hero .ref-center{left:56%;width:52vw}.reference-hero .ref-skills-left{left:32%}.reference-hero .ref-skills-right{right:0}.reference-hero .ref-skill{font-size:35px}.reference-hero .ref-skill svg{width:30px}.reference-hero .ref-intro{min-width:310px}.reference-hero .ref-actions{gap:9px}.reference-hero .ref-actions a{font-size:12px;padding:0 12px}.reference-hero .ref-intro h1{font-size:79px}}
+@media(max-width:950px){.site-header{height:75px}.reference-hero .ref-hero-inner{min-height:calc(100svh - 75px)}.reference-hero .ref-heading{left:10%;right:4%;top:32px}.reference-hero .ref-heading>span{font-size:clamp(75px,12vw,115px)}.reference-hero .ref-hero-content{min-height:685px}.reference-hero .ref-intro{padding-top:155px;min-width:275px;width:42%}.reference-hero .ref-intro h1{font-size:70px}.reference-hero .ref-center{left:61%;width:57vw;height:540px}.reference-hero .ref-skills{display:none}.reference-hero .ref-designation{font-size:12px}.reference-hero .ref-summary{max-width:300px}.reference-hero .ref-motto{font-size:11px}.brand-name{font-size:16px}}
+@media(max-width:760px){.site-header{height:70px}.brand-symbol{font-size:44px}.brand-name{font-size:14px}.reference-hero .ref-hero-inner{min-height:0;padding-inline:23px}.reference-hero .ref-heading{top:23px;left:0;right:0}.reference-hero .ref-heading>span{font-size:clamp(54px,12vw,88px)}.reference-hero .ref-heading>div{font-size:15px;letter-spacing:6px;gap:7px}.reference-hero .ref-heading i{width:40px}.reference-hero .ref-hero-content{min-height:0;padding-top:166px;display:flex;flex-direction:column}.reference-hero .ref-intro{padding-top:0;width:100%;min-width:0}.reference-hero .ref-intro h1{font-size:clamp(76px,17vw,102px)}.reference-hero .ref-namaste{font-size:23px;margin-bottom:14px}.reference-hero .ref-hello{font-size:21px}.reference-hero .ref-designation{white-space:normal;font-size:14px}.reference-hero .ref-summary{max-width:420px}.reference-hero .ref-actions{margin-top:23px;flex-wrap:wrap}.reference-hero .ref-actions a{font-size:13px}.reference-hero .ref-connect{margin-top:20px}.reference-hero .ref-center{position:relative;left:auto;bottom:auto;transform:none;width:100%;height:420px;margin-top:-4px}.reference-hero .ref-bottom{margin-top:-10px}.reference-hero .ref-motto{font-size:10px;letter-spacing:2px;gap:7px}.reference-hero .ref-motto b{padding:0 3px}.reference-hero .ref-motto i{width:18px}.reference-hero .ref-dots{opacity:.35}.nav-links.is-open{background:#1d070e}}
+@media(max-width:420px){.brand-name{font-size:12px}.reference-hero .ref-heading>span{font-size:55px}.reference-hero .ref-heading>div{font-size:12px;letter-spacing:4px}.reference-hero .ref-hero-content{padding-top:147px}.reference-hero .ref-intro h1{font-size:75px}.reference-hero .ref-center{height:345px}.reference-hero .ref-motto{font-size:9px;letter-spacing:1px}.reference-hero .ref-actions a{min-height:50px}}
+@media(prefers-reduced-motion:reduce){.reference-hero .ref-mouse span{animation:none}}
